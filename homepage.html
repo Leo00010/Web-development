@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couch Critics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: maroon;">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="#">Couch Critics</a>
+      
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav d-flex flex-row gap-2 mb-2 mb-lg-0">
+                <li class="nav-item me-2">
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-light btn-sm" href="login.html">Sign In</a>
+                      </li>
+                      <li class="nav-item me-2">
+                        <a class="btn btn-outline-light btn-sm" href="login.html">Create Account</a>
+                      </li>
+                <li class="nav-item me-2">
+                  <a class="btn btn-success btn-sm" href="#">Add Movie</a>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="btn btn-secondary btn-sm" href="#">Wishlist</a>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="btn btn-light btn-sm text-dark" href="#">Home</a>
+                </li>
+              </ul>
+
+              <form class="d-flex ms-3" role="search">
+                <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <main class="text-center bg-dark text-white pt-3 pb-3 mt-3">
+        <div class="container">
+          <h2 class="display-4">Couch Critics</h2>
+          <p class="lead">We judge movies... in sweatpants.</p>
+        </div>
+      </main>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Trending Reviews</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BYjhkZjM3ZWYtMjUxMS00YzhlLTkxZWYtMzhkMzFhOTQ1NjRkXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">The Amateur</h5>
+                <div class="star-rating">★★★☆☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BYzFjMzNjOTktNDBlNy00YWZhLWExYTctZDcxNDA4OWVhOTJjXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">A Minecraft Movie</h5>
+                <div class="star-rating">★★★★☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BYmQxZGIxNTYtYTQwMy00ODdkLWI0MmQtM2E0ZmIyNmYzMGMzXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">A Working Man</h5>
+                <div class="star-rating">★★★☆☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BYTI1N2ZmNWMtOTFkMi00ZDA5LTk3NjktMWE5NGEzOTgzODc1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">En Fanfare</h5>
+                <div class="star-rating">★★★☆☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/47/The_Sloth_Lane_film_poster.png" alt="Movie Poster">
+                <h5 class="mt-2">The Sloth Lane</h5>
+                <div class="star-rating">★★☆☆☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BZGQwYmEzMzktYzBmMy00NmVmLTkyYTUtOTYyZjliZDNhZGVkXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">Mickey 17</h5>
+                <div class="star-rating">★★★☆☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BOTZiNTBlZjctODg5OC00NWZlLTg3MzktZDUwYjYxYjg4MWExXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">Vitória</h5>
+                <div class="star-rating">★★★☆☆</div>
+            </div>
+            <div class="col movie-card text-center">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzZhMTc5MWUtOTE2MS00MjUwLTljYWEtYTk1ZmVjNzhmMzYzXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
+                <h5 class="mt-2">The Monkey</h5>
+                <div class="star-rating">★★★☆☆</div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Movie Wishlist & Review Site</p>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
