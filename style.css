@@ -5,14 +5,20 @@ body {
     color: white;
 }
 
- 
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Bebas Neue', sans-serif;
     color: white;
 }
+
 header {
-background-color: maroon;
-color: white;
+    background-color: maroon;
+    color: white;
 }
 
 .login-background {
@@ -22,30 +28,51 @@ color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: maroon;
-  }
+}
 
 .navbar-brand {
-font-family: 'Bebas Neue', sans-serif;
-font-size: 2.5rem;
-letter-spacing: 1px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
 .movie-card img {
-width: 100%;
-height: auto;
-aspect-ratio: 2/3;
-object-fit: cover;
-border-radius: 5px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .star-rating {
-color: gold;
-font-size: 1rem;
+    color: gold;
+    font-size: 1rem;
 }
 
 footer {
-background-color: black;
-padding: 15px;
-text-align: center;
-color: white;
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.related-movie-poster {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+#starRating .star {
+    font-size: 1.8rem;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#starRating .star.hover,
+#starRating .star.selected {
+    color: gold;
 }
