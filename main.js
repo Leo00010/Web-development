@@ -1,32 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            const title = document.getElementById("movieTitle").value.trim();
-            if (title.length < 2) {
-                alert("The title must be at least 2 characters long.");
-                e.preventDefault();
+    const stars = document.querySelectorAll('#starRating .star');
+    const ratingInput = document.getElementById('ratingValue');
+    let selectedRating = 0;
+
+    function highlightStars(rating) {
+        stars.forEach(star => {
+            const value = parseFloat(star.dataset.value);
+            if (value <= rating) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
             }
+        });
+    }
+
+    stars.forEach(star => {
+        star.addEventListener('mouseenter', () => {
+            highlightStars(star.dataset.value);
+        });
+
+        star.addEventListener('mouseleave', () => {
+            highlightStars(selectedRating);
+        });
+
+        star.addEventListener('click', () => {
+            selectedRating = star.dataset.value;
+            ratingInput.value = selectedRating;
+            highlightStars(selectedRating);
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const reviewText = document.getElementById("reviewText");
+    const charCount = document.getElementById("charCount");
+
+    if (reviewText && charCount) {
+        reviewText.addEventListener("input", () => {
+            const currentLength = reviewText.value.length;
+            const maxLength = reviewText.getAttribute("maxlength");
+            charCount.textContent = `${currentLength} / ${maxLength} characters`;
         });
     }
 });
 
 $(document).ready(function () {
-    $(".movie-card").hover(
-        function () {
-            $(this).css("transform", "scale(1.05)").css("transition", "0.3s");
-        },
-        function () {
-            $(this).css("transform", "scale(1)");
-        }
-    );
-});
+    $("#searchInput").on("keyup", function () {
+        const value = $(this).val().toLowerCase();
 
-$(document).ready(function () {
-    $("#movieGenre").change(function () {
-        const genre = $(this).val();
-        if (genre) {
-            alert(`Genre selected: ${genre}`);
-        }
+        $(".movie-card").filter(function () {
+            const title = $(this).find(".movie-title").text().toLowerCase();
+            $(this).toggle(title.includes(value));
+        });
     });
 });
+

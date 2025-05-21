@@ -72,7 +72,6 @@ footer {
     transition: color 0.2s;
 }
 
-#starRating .star.hover,
-#starRating .star.selected {
+#starRating .star.active {
     color: gold;
 }
